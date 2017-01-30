@@ -2,15 +2,46 @@
 <html lang = "en">
 <head>
 	<meta charset = "UTF-8">
-	<title>Document</title>
-	<link rel = "stylesheet" href = "css/main.css">
+	<title>Demo Main</title>
+	<link type = "text/css" rel = "stylesheet" href = "css/main.css">
+	<link type = "text/css" rel = "stylesheet" href = "css/side-bar.css">
+	<link type = "text/css" rel = "stylesheet" href = "css/bootstrap.min.css">
 </head>
 <body>
 	<div class = "main-wrapper">
+
+	<div class = "side-bar" id = "side-bar">
+			<ul class = "item-group" id = "item-group">
+				<a><li class = "item" id = "Profile">
+					<span class = "glyphicon glyphicon-user"></span>
+					<p>Profile</p>	
+				</li></a>
+				<a><li class = "item" id = "asset">
+					<span class = "glyphicon glyphicon-yen"></span>
+					<p>Asset</p>
+				</li></a>
+				<a><li class = "item" id = "brand">
+					<span class = "glyphicon glyphicon-tag"></span>
+					<p>Brand</p>
+				</li></a>
+				<a><li class = "item" id = "history">
+					<span class = "glyphicon glyphicon-dashboard"></span>
+					<p>History</p>
+				</li></a>
+				<a><li class = "item" id = "calendar">
+					<span class = "glyphicon glyphicon-th"></span>
+					<p>Calendar</p>
+				</li></a>
+			</ul>
+			<div class="cross-area" id = "cross">
+				<span class = "glyphicon glyphicon-remove" ></span>
+			</div>
+		<script src = "js/side-bar.js"></script>
+	</div>
 	
 	<header>
 		<nav>
-			<div class = "logo"><a href = "#">Zhuo Diao</a></div>
+			<div class = "logo"><a id = "logo" href = "#">Zhuo Diao</a></div>
 			<ul>
 				<li><a href = "#">MAIN</a></li>
 				<li><a href = "#">INFO</a></li>
@@ -20,10 +51,12 @@
 		</nav>
 		<div id = "banner">
 			<div class = "inner">
-				<h1>Zhuo Diao</h1>
-				<p = class = "sub-line">This is gonna be the best day of my life. Blah blah balh blah</p>
-				<button id = "abt-btn">About me</button>
-				<div class = "more">More</div>
+				<h1>Discover this web demo</h1>
+				<p = class = "sub-line">Always be a beginner</p>
+				<button id = "abt-btn">Play!</button>
+				<div id = "more">More
+					<span class = "glyphicon glyphicon-menu-down"><a></a></span>
+				</div>
 			</div>
 		</div>
 	</header>
