@@ -6,22 +6,91 @@
 
 a{
 	text-decoration: none;
+	color: #fff;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.top-bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: -1;
+}
+
+#top-bg-fade{
+	animation: bg-fade 3s;
+	-webkit-animation: bg-fade 3s;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	z-index: -1;
+}
+
+@keyframes bg-fade{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+
+#top-bg-show{
+	animation: bg-show 3s;
+	-webkit-animation: bg-show 3s;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	z-index: -1;
+}
+
+@keyframes bg-show{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.main-wrapper {
+	width: 100%;
 }
 
 nav
 {
-	background: rgba(0, 0, 0, 0.7);
-	height: 4em;
+	background: rgba(0, 0, 0, 1);
+	height: 50px;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 1;
 }
 
+.nav-bar {
+	display: block;
+}
+
+.nav-bar-hidden {
+	animation: nav-bar-close 0.7s;
+	-webkit-animation: nav-bar-close 0.7s;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+@keyframes nav-bar-close{
+	from{transform: translateY(0);}
+	to{transform: translateY(-4em);}
+}
+
+}
+
 #banner
 {
 	background: rgba(255,255,255,0.2);
-	height: 100%;
+	height: 768px;
 }
 
 nav ul
@@ -34,9 +103,7 @@ nav ul
 nav ul li, #logo
 {
 	display: inline-block;
-	padding-left: 1em;
 	line-height: 50px;
-	margin-right: 20px;
 }
 
 nav a
@@ -45,6 +112,15 @@ nav a
 	text-decoration: none;
 	display: inline-block;
 	height: inherit;
+	color: #fff;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+nav a:hover{
+	display: inline-block;
+	background: #444;
+	text-decoration: none;
 	color: #fff;
 }
 
@@ -63,11 +139,13 @@ nav .logo
 
 #banner .inner
 {
-	max-width: 300px;
+	padding-top: 20%;
+	max-width: 500;
 	text-align: center;
 	margin: 0 auto;
 	position: relative;
 	top: 40%;
+	background: rgba(255,255,255,0.7);
 }
 
 #banner .inner h1
@@ -98,16 +176,14 @@ button
 	text-align: center;
 }
 
-#more {
-	position: absolute;
-	left: 30%;
-	bottom: -150%;
+.inner #more {
+	padding-top: 53%;
 	font-size: 2em;
 	text-align: center;
 	cursor: pointer;
 }
 
-#more a{
+header .inner #more a{
 	animation: more 0.8s;
 	-webkit-animation: more 0.8s;
 	animation-iteration-count: infinite;
@@ -156,7 +232,7 @@ h3
 
 .mid-section
 {
-	background: #089db0;
+	background: #222;
 	text-align: center;
 	padding: 100px;
 	color: #fff;
@@ -184,9 +260,17 @@ h3
 	border: 1px solid #077484;
 }
 
+.blank-space{
+	height: 300px;
+	color: #222;
+	opacity: 0.5;
+	z-index: 2;
+}
+
 .down-section
 {
 	background-color:#121220;
+	z-index: 100;
 }
 
 .down-section .pre-img
@@ -305,6 +389,7 @@ footer
 	color: #fff;
 	min-height: 200px;
 	text-align: center;
+	z-index: 1;
 }
 
 ul.share-group
@@ -321,11 +406,3 @@ ul.share-group
 	padding: 10px;
 }
 
-.main-wrapper
-{
-	background: url(../img/banner.jpg);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
